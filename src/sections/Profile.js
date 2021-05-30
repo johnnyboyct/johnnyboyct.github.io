@@ -31,10 +31,8 @@ const Profile = (props) => {
           </div>
         </Tilt>
 
-
       </div>
 
-      
       <h2 className="text-center ">{profileData.label}</h2>
       <div className="divider"></div>
       <ul className="contact-links text-center">
@@ -69,7 +67,7 @@ const Profile = (props) => {
         components and a{" "}
         <a href="https://jsonresume.org/schema/">JSON Resume Schema</a>. The
         full source code can be found in
-        <a href="https://github.com/johnnyboyct/jm-resume">my Github repo</a>.
+        <a href="https://github.com/johnnyboyct/">my Github repo</a>.
       </p>
     </div>
   );

@@ -180,7 +180,7 @@ const Profile = (props) => {
         <a href="https://facebook.github.io/react/">React</a> components and a
         <a href="https://jsonresume.org/schema/">JSON Resume Schema</a>. The
         full source code can be found in
-        <a href="https://github.com/johnnyboyct/jm-resume">my Github repo</a>.
+        <a href="https://github.com/johnnyboyct/">my Github repo</a>.
       </p>
     </div>
   );
