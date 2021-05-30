@@ -21,7 +21,6 @@ header {
 }
 
 .container {
-    display: grid;
     grid-gap: 10px;
     grid-template-areas: "head head""aside main""foot foot";
     width: 100%;
@@ -44,6 +43,12 @@ header {
         width: 1170px;
     }
 }
+
+@media only screen and (min-width: 68px) {
+    header {
+      display:none;
+    }
+  }
 
 main {
     grid-area: main;
