@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
+import './index.css';
 import * as serviceWorker from './serviceWorker';
 const json = require('./resume.json'); // load resume file
-
+window.resume = json
 ReactDOM.render(
   <React.StrictMode>
     <App jsonObj={json} />

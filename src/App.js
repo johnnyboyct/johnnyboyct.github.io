@@ -1,117 +1,122 @@
-import ParticlesBg from 'particles-bg';
-import { object } from 'prop-types';
-import React from 'react';
-import Darkreader from 'react-darkreader';
-import ParticleImage, {
-  forces,
-  ParticleForce, ParticleOptions,
-  Vector
-} from "react-particle-image";
-import './App.css';
-import i from './images/name.jpg';
-import About from './sections/About';
-import Education from './sections/Education';
-import Profile from './sections/Profile';
-import Skills from './sections/Skills';
-import Work from './sections/Work';
-// Round number up to nearest step for better canvas performance
-const round = (n: number, step = 20) => Math.ceil(n / step) * step;
+import { CssBaseline, MuiThemeProvider } from "@material-ui/core";
+import Box from '@material-ui/core/Box';
+import Link from '@material-ui/core/Link';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
+import ParticlesBg from "particles-bg";
+import { object } from "prop-types";
+import React, { Fragment, Suspense, useEffect, useState } from "react";
+import ReactGA from 'react-ga';
+import "./App.css";
+import Heading from './components/Heading';
+import Profile from "./components/Profile";
+import References from "./components/References";
+import Skills from './components/Skills';
+import Work from './components/Work';
+import GlobalStyles from "./GlobalStyles";
+import About from "./sections/About";
+import Education from "./sections/Education";
+import theme from "./theme";
 
-// Try making me lower to see how performance degrades
-const STEP = 30;
+ReactGA.initialize('UA-87915010-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
-const particleOptions: ParticleOptions = {
-  filter: ({ x, y, image }) => {
-    // Get pixel
-    const pixel = image.get(x, y);
-    // Make a particle for this pixel if magnitude < 200 (range 0-255)
-    const magnitude = (pixel.r + pixel.g + pixel.b) / 3;
-    return magnitude < 200;
-  },
-  color: ({ x, y, image }) => {
-    const pixel = image.get(x, y);
-    // Canvases are much more performant when painting as few colors as possible.
-    // Use color of pixel as color for particle however round to nearest 30
-    // to decrease the number of unique colors painted on the canvas.
-    // You'll notice if we remove this rounding, the framerate will slow down a lot.
-    return `rgba(
-      ${round(pixel.r, STEP)}, 
-      ${round(pixel.g, STEP)}, 
-      ${round(pixel.b, STEP)}, 
-      ${round(pixel.a, STEP) / 255}
-    )`;
-  },
-  radius: ({ x, y, image }) => {
-    const pixel = image.get(x, y);
-    const magnitude = (pixel.r + pixel.g + pixel.b) / 3;
-    // Lighter colors will have smaller radius
-    return 3 - (magnitude / 255) * .5;
-  },
-  mass: () => 40,
-  friction: () => 0.15,
-  initialPosition: ({ canvasDimensions }) => {
-    return new Vector(canvasDimensions.width / 2, canvasDimensions.height / 2);
-  }
-};
+function Copyright() {
+  return (
+    <Typography variant="body2" className="copywrite" align="center">
+      {'Copyright © '}
+      <Link color="inherit" href="https://johnm.org/">
+        Johnm.org      </Link>{' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+  );
+}
 
-const motionForce = (x: number, y: number): ParticleForce => {
-  return forces.disturbance(x, y, 7);
-};
-
-const App = props => {
-  const { jsonObj: { basics, work, skills, education } } = props
+const App = (props) => {
+  const {
+    jsonObj: { basics, work, skills, education, references },
+  } = props;
   const profileData = basics;
   const aboutData = profileData.summary;
   const workData = work;
   const skillsData = skills;
   const educationData = education;
-  // console.log(profileData)
+  const referenceData = references;
+  const [height, setHeight] = useState(0)
+
+  useEffect(() => {
+    setHeight(
+      document.body.clientHeight)
+  }, [])
+  
   return (
-    <div className="wrapper">
-      <ParticleImage
-        id="pName"
-        src={i}
-        width={Number(800)}
-        height={Number(90)}
-        scale={0.75}
-        entropy={30}
-        maxParticles={4000}
-        particleOptions={particleOptions}
-        mouseMoveForce={motionForce}
-        touchMoveForce={motionForce}
-        backgroundColor="none"
-      />
-      <div className="container">
+    <MuiThemeProvider theme={theme}>
 
+      <CssBaseline />
+      <GlobalStyles />
+      <Suspense fallback={<Fragment />}>
 
-        <aside>
-          <div className="inner">
-            <Profile profileData={profileData} />
-            <Darkreader theme={{
-              brightness: 100,
-              contrast: 90,
-              sepia: 10,
-            }} />
+        <div className="wrapper">
+
+          <div style={{ width: "100%", height: height, position: "absolute", zIndex: "-1", top: "0px", left: "0px" }}>
+
+            <ParticlesBg id="ParticlesBg" type="cobweb" num={1000} bg={true} color="#46cc46" />
           </div>
-        </aside>
-        <main>
+          <header>
+            <Heading profileData={profileData}></Heading>
+           
+          </header>
+          <div className="container">
 
-          <div className="inner">
-            <About aboutData={aboutData} />
-            <Work workData={workData} />
-            <Skills skillsData={skillsData} />
-            <Education educationData={educationData} />
+            <Paper elevation={1}  >
+
+              <aside>
+                <div className=" ">
+                  <Profile profileData={profileData}  />
+
+                </div>
+              </aside>
+            </Paper>
+
+            <main>
+              <div className="inne2r">
+                <Paper elevation={2} >
+
+                  <About aboutData={aboutData} />
+                </Paper>
+                <Paper elevation={3}>
+
+                  <Work workData={workData} />
+                </Paper>
+                <Paper elevation={3}>
+
+                  <Skills skillsData={skillsData} />
+                </Paper>
+                <Paper elevation={3}>
+
+                  <References referenceData={referenceData} />
+                </Paper>
+                <Paper elevation={3}>
+
+                  <Education educationData={educationData} />
+                </Paper>
+              </div>
+            </main>
+
           </div>
-        </main>
-      </div>
-      <ParticlesBg  id="ParticlesBg" type="cobweb" bg={true} color="#46cc46" />
+          <Box mt={5}>
+            <Copyright />
+          </Box>
+        </div>
 
-    </div>
-  )
+      </Suspense>
+    </MuiThemeProvider >
+  );
 };
 
 App.propTypes = {
-  jsonObj: object.isRequired
-}
+  jsonObj: object.isRequired,
+};
 
 export default App;

@@ -1,0 +1,43 @@
+:root {
+    --dark-navy: #020c1b;
+    --navy: #0a192f;
+    --light-navy: #112240;
+    --lightest-navy: #233554;
+    --navy-shadow: rgba(2, 12, 27, 0.7);
+    --slate: #8892b0;
+    --light-slate: #a8b2d1;
+    --lightest-slate: #ccd6f6;
+    --white: #e6f1ff;
+    --green-bright: #46cc46;
+    --green-tint: rgba(100, 255, 218, 0.1);
+  }
+
+.Typist {
+    color: var(--lightest-slate);
+    text-align: center;
+    font-size: 76px;
+    margin-top: -20px;
+    max-height: 12rem;
+    height: 12rem;
+  }
+
+  .Typist .Cursor--blinking {
+    color: var(--green-bright);
+    padding-left: 4px;
+  }
+  
+.intro-title {
+    font-family: "Space Mono",monospace,sans-serif;
+    font-size: 5rem;
+  }
+
+  .intro-name {
+    font-family: "Space Mono",monospace,sans-serif;
+    color: var(--green-bright);
+    font-weight: bold;
+    font-size: 86px;
+  }
+
+  .summary{
+    font-size: 1rem;
+  }
