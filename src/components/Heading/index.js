@@ -5,9 +5,6 @@ import Box from '@material-ui/core/Box';
 
 const Heading = props => {
   const { profileData } = props;
-console.log('====================================');
-console.log(profileData);
-console.log('====================================');
   return (
 <Box display={{ xl: 'none',lg: 'none',md: 'none', sm: 'block' }}>
 

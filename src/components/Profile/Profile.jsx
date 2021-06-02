@@ -2,14 +2,25 @@ import { Github, Linkedin } from "@icons-pack/react-simple-icons";
 import { object } from "prop-types";
 import React from "react";
 import Tilt from "react-parallax-tilt";
-import { EmailIcon, EmailShareButton, LinkedinIcon, LinkedinShareButton, RedditIcon, RedditShareButton, TelegramIcon, TelegramShareButton, WhatsappIcon, WhatsappShareButton } from "react-share";
+import {
+  EmailIcon,
+  EmailShareButton,
+  LinkedinIcon,
+  LinkedinShareButton,
+  RedditIcon,
+  RedditShareButton,
+  TelegramIcon,
+  TelegramShareButton,
+  WhatsappIcon,
+  WhatsappShareButton,
+} from "react-share";
+import { CodeBlock, dracula } from "react-code-blocks";
+
 import "./Profile.css";
 const Mailto = ({ email, subject = "", body = "", children }) => {
   let params = subject || body ? "?" : "";
-  if (subject)
-    params += `subject=${encodeURIComponent(subject)}`;
-  if (body)
-    params += `${subject ? "&" : ""}body=${encodeURIComponent(body)}`;
+  if (subject) params += `subject=${encodeURIComponent(subject)}`;
+  if (body) params += `${subject ? "&" : ""}body=${encodeURIComponent(body)}`;
   return <a href={`mailto:${email}${params}`}>{children}</a>;
 };
 const Icon = ({ url, size }) => {
@@ -33,34 +44,32 @@ const Profile = (props) => {
   const shareUrl = profileData.url;
   const title = profileData.title;
   return (
-<div>
-          <h1 className="text-title-name">
-            {profileData.name}
-          </h1>
-        <Tilt
-          className="parallax-effect-glare-scale inner"
-          perspective={500}
-          glareEnable={true}
-          glareMaxOpacity={0.45}
-          scale={1.02}
-        >
-          <div className="inner-element">
-            <img
-              role="presentation"
-              className="full-block"
-              src={profileData.picture}
-              width="100%"
-              alt="profile pic"
-            />
-          </div>
-        </Tilt>
+    <div>
+      <h1 className="text-title-name">{profileData.name}</h1>
+      <Tilt
+        className="parallax-effect-glare-scale inner"
+        perspective={500}
+        glareEnable={true}
+        glareMaxOpacity={0.45}
+        scale={1.02}
+      >
+        <div className="inner-element">
+          <img
+            role="presentation"
+            className="full-block"
+            src={profileData.picture}
+            width="100%"
+            alt="profile pic"
+          />
+        </div>
+      </Tilt>
       <h2 className=" inner text-center blue">{profileData.label}</h2>
       <ul className=" inner contact-links ">
         <li>
           <i className="fas fa-map-marked"></i>
           <span>
             {profileData.location.city}, {profileData.location.region},
-          {profileData.location.countryCode}
+            {profileData.location.countryCode}
           </span>
         </li>
         <li>
@@ -92,7 +101,6 @@ const Profile = (props) => {
           </a>
         </li>
       </ul>
-      <div className="divider"></div>
       <ul className="profileLinks text-center">
         <li>
           <a
@@ -170,13 +178,31 @@ const Profile = (props) => {
         </li>
       </ul>
       <p className="small-text inner ">
-        I built this site with{" "}
-        <a href="https://facebook.github.io/react/">React</a> components and a
-        <a href="https://jsonresume.org/schema/">JSON Resume Schema</a>. The
-        full source code can be found in
-        <a href="https://github.com/johnnyboyct/">my Github repo</a>.
+        <div class="box">
+          <ul class="built-with ">
+            <li>
+              I built this site with
+              <a href="https://facebook.github.io/react/">React</a> components
+            </li>
+            <li>
+              and a
+              <a href="https://jsonresume.org/schema/">My JSON Resume Schema</a>
+              .
+            </li>
+            <li>
+              The JSON resume is here
+              <a href="https://registry.jsonresume.org/johnnyboyct">
+                https://registry.jsonresume.org/johnnyboyct
+              </a>
+            </li>
+            <li>
+              The full source code can be found in
+              <a href="https://github.com/johnnyboyct/">my Github repo</a>.
+            </li>
+          </ul>
+        </div>
       </p>
-      </div>
+    </div>
   );
 };
 Profile.propTypes = {
