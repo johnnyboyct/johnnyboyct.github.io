@@ -1,5 +1,3 @@
-import Paper from "@material-ui/core/Paper";
-import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import LaptopChromebookTwoToneIcon from "@material-ui/icons/LaptopChromebookTwoTone";
 import Timeline from "@material-ui/lab/Timeline";
@@ -11,17 +9,8 @@ import TimelineOppositeContent from "@material-ui/lab/TimelineOppositeContent";
 import TimelineSeparator from "@material-ui/lab/TimelineSeparator";
 import React from "react";
 import "./Work.css";
-const useStyles = makeStyles((theme) => ({
-  paper: {
-    padding: "6px 16px",
-  },
-  secondaryTail: {
-    backgroundColor: theme.palette.secondary.main,
-  },
-}));
-const WorkItem = (props) => {
-  const classes = useStyles();
 
+const WorkItem = (props) => {
   const { workItemData } = props;
   const getWorkDates = () => {
     const startdate = new Date(workItemData.startDate);
@@ -35,13 +24,13 @@ const WorkItem = (props) => {
 
     return (
       <span className="startdate">
-        {startdate.toLocaleDateString()} - {enddate}
+        {startdate.toLocaleDateString() + '-' + enddate}
       </span>
     );
   };
 
   return (
-    <TimelineItem  className="rt">
+    <TimelineItem className="rt">
       <TimelineOppositeContent>
         <Typography variant="body2" className="dates">
           {getWorkDates()}
@@ -54,20 +43,20 @@ const WorkItem = (props) => {
         <TimelineConnector />
       </TimelineSeparator>
       <TimelineContent className="mt">
-        <Paper elevation={3} className={classes.paper + ' '}>
+        {/* <Paper elevation={3} className={classes.paper + ' '}> */}
 
-          <Typography variant="h6" component="div" className="banner">
-            <div className="banner-h2">
-              {workItemData.name}
-            </div>
-          </Typography>
+        <Typography variant="h6" component="div" className="banner">
+          <div className="banner-h2">
+            {workItemData.name}
+          </div>
+        </Typography>
 
-          <Typography variant="h5" component="span" className="">
+        <Typography variant="h5" component="span" className="">
 
-            <h6 className="brackets">{workItemData.position}</h6>
-          </Typography>
-          <Typography>{workItemData.summary}</Typography>
-        </Paper>
+          <h6 className="brackets">{workItemData.position}</h6>
+        </Typography>
+        <Typography className="summary">{workItemData.summary}</Typography>
+        {/* </Paper> */}
       </TimelineContent>
     </TimelineItem>
   );
@@ -84,14 +73,15 @@ const Work = (props) => {
   };
 
   return (
-    <Timeline align="alternate">
-      <section className="work">
+    <section className="work">
+
+      <Timeline align="alternate">
         <h2 className="text-uppercase">
           <i className="fa fa-lg fa-building"></i> Work experience
         </h2>
         {getWorkExperience()}
-      </section>
-    </Timeline>
+      </Timeline>
+    </section>
   );
 };
 

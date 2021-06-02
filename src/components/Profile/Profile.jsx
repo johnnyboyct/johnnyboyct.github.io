@@ -33,13 +33,10 @@ const Profile = (props) => {
   const shareUrl = profileData.url;
   const title = profileData.title;
   return (
-    <div >
-      <div className="profileImg ">
-        <div >
-          <h1 className=" text-title">
+<div>
+          <h1 className="text-title-name">
             {profileData.name}
           </h1>
-        </div>
         <Tilt
           className="parallax-effect-glare-scale inner"
           perspective={500}
@@ -57,9 +54,7 @@ const Profile = (props) => {
             />
           </div>
         </Tilt>
-      </div>
       <h2 className=" inner text-center blue">{profileData.label}</h2>
-      <div className="divider"></div>
       <ul className=" inner contact-links ">
         <li>
           <i className="fas fa-map-marked"></i>
@@ -174,7 +169,6 @@ const Profile = (props) => {
           </RedditShareButton>
         </li>
       </ul>
-      <div className="divider"></div>
       <p className="small-text inner ">
         I built this site with{" "}
         <a href="https://facebook.github.io/react/">React</a> components and a
@@ -182,7 +176,7 @@ const Profile = (props) => {
         full source code can be found in
         <a href="https://github.com/johnnyboyct/">my Github repo</a>.
       </p>
-    </div>
+      </div>
   );
 };
 Profile.propTypes = {

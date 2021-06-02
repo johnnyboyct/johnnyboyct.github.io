@@ -78,3 +78,20 @@
       opacity: 1;
     }
   }
+
+  .text-title-name {
+    background: #000;
+    color: #FFFFFF;
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-top: 0rem;
+    padding-bottom: .5rem;
+
+    padding-top: .5rem;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000000;
+    text-transform: uppercase;
+    transition: all 250ms ease-in-out;
+    vertical-align: top;
+    width: 100%;
+}

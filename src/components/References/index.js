@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
         position: "relative",
         background: "#777",
         borderRadius: ".4em",
-        color:'#FFF',
+        color: '#FFF',
         padding: '12px',
         float: 'left',
         width: '80%',
@@ -63,9 +63,7 @@ const useStyles = makeStyles((theme) => ({
             marginLeft: "-1.594em"
         }
     },
-    cardRoot: {
-        padding:0,
-    },
+
     expand: {
         transform: 'rotate(0deg)',
         marginLeft: 'auto',
@@ -81,9 +79,17 @@ const useStyles = makeStyles((theme) => ({
     avatar: {
         backgroundColor: "#46cc46",
     },
-    cardHeader:{
-        padding:0,
-        fontSize:'2rem'
+    avatar1: {
+        color: "#46cc46",
+        backgroundColor: '#000'
+    },
+    cardRoot: {
+        padding: 0,
+        fontSize: '2rem'
+    },
+    cardHeader: {
+        padding: 0,
+        fontSize: '2rem'
     }
 }));
 const getInitials = (nameString) => {
@@ -105,17 +111,18 @@ const References = (props) => {
     const getReferences = referenceData.map(function (item, index) {
         return (
             <div key={index}>
-                <Card className={classes.cardRoot}>
+                <Card className={classes.cardRoot} elevation={0}>
                     <CardHeader
-                    className={classes.cardHeader}
+                        className={classes.cardHeader}
                         avatar={
-                            <Avatar aria-label="person" className={classes.avatar}>
+                            <Avatar aria-label="person" className={(index % 2) ? classes.avatar : classes.avatar1}>
                                 {getInitials(item.name)}
                             </Avatar>
                         }
 
                         title={item.name}
                         subheader={'Reference: '}
+                        
                     />
                     <CardContent>
 
@@ -128,7 +135,7 @@ const References = (props) => {
                                 {item.reference}
                             </Typography>
                         </Collapse>
-                      
+
                     </CardContent>
                     <CardActions disableSpacing>
                         <IconButton

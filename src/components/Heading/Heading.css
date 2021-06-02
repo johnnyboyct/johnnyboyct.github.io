@@ -12,13 +12,31 @@
     --green-tint: rgba(100, 255, 218, 0.1);
   }
 
-.Typist {
+  @media screen and (min-width: 600px) {
+    .Typist {
     color: var(--lightest-slate);
     text-align: center;
     font-size: 76px;
     margin-top: -20px;
-    max-height: 12rem;
-    height: 12rem;
+    background-color: black;
+    background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%);
+    margin: 0;
+    overflow: hidden;
+    padding: 2rem;
+    color: white;
+    font: 1.3rem Inconsolata, monospace;
+    text-shadow: 0 0 5px #C8C8C8;
+    height: 11rem;
+  }
+
+  body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 2px);
+    pointer-events: none;
   }
 
   .Typist .Cursor--blinking {
@@ -33,7 +51,8 @@
 
   .intro-name {
     font-family: "Space Mono",monospace,sans-serif;
-    color: var(--green-bright);
+    text-shadow: 2px 2px 2px #000000;
+
     font-weight: bold;
     font-size: 86px;
   }
@@ -41,3 +60,4 @@
   .summary{
     font-size: 1rem;
   }
+}

@@ -1,18 +1,20 @@
 import React from 'react';
 import Typist from 'react-typist';
 import './Heading.css'
+import Box from '@material-ui/core/Box';
 
 const Heading = props => {
   const { profileData } = props;
-
+console.log('====================================');
+console.log(profileData);
+console.log('====================================');
   return (
+<Box display={{ xl: 'none',lg: 'none',md: 'none', sm: 'block' }}>
 
     <Typist avgTypingDelay={120}
              cursor={{
               show: true,
-              blink: true,
-              element: "",
-              hideWhenDone: true,
+              blink: true
             }}
     >
       <span className="intro-title">
@@ -22,10 +24,10 @@ const Heading = props => {
         <span className="intro-name">{"John Marczak"}</span>
         {"."}
         <div className="summary">{profileData.summary}</div>
-        <Typist.Backspace count={8} delay={200} />
 
       </span>
     </Typist>
+    </Box>
   )
 }
 
