@@ -17,6 +17,16 @@
   padding-bottom: .25rem;
 }
 
+.dateinfo{
+  float: right;
+  font-size: .75rem;
+}
+
+.starttoend{
+  float: left;
+  font-size: .75rem;
+}
+
 .MuiTimelineSeparator-root{
 margin-left: .5rem !important;
 margin-right: .5rem !important;

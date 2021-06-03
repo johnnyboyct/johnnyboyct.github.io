@@ -14,7 +14,6 @@ import {
   WhatsappIcon,
   WhatsappShareButton,
 } from "react-share";
-import { CodeBlock, dracula } from "react-code-blocks";
 
 import "./Profile.css";
 const Mailto = ({ email, subject = "", body = "", children }) => {
@@ -45,7 +44,6 @@ const Profile = (props) => {
   const title = profileData.title;
   return (
     <div>
-      <h1 className="text-title-name">{profileData.name}</h1>
       <Tilt
         className="parallax-effect-glare-scale inner"
         perspective={500}
@@ -61,8 +59,11 @@ const Profile = (props) => {
             width="100%"
             alt="profile pic"
           />
+                <h1 className="text-title-name">{profileData.name}</h1>
+
         </div>
       </Tilt>
+
       <h2 className=" inner text-center blue">{profileData.label}</h2>
       <ul className=" inner contact-links ">
         <li>
@@ -100,6 +101,12 @@ const Profile = (props) => {
             Word Resume
           </a>
         </li>
+        <li>
+          <a href="John_Marczak.vcf" download>
+          <i className="fas fa-address-card"></i>            My Vcard
+          </a>
+        </li>
+        
       </ul>
       <ul className="profileLinks text-center">
         <li>
@@ -131,8 +138,8 @@ const Profile = (props) => {
         <li>
           <LinkedinShareButton
             url={shareUrl}
-            className="Demo__some-network__share-button"
-          >
+            className="Demo__some-network__share-button" >
+
             <LinkedinIcon size={32} round />
           </LinkedinShareButton>
         </li>
@@ -177,35 +184,17 @@ const Profile = (props) => {
           </RedditShareButton>
         </li>
       </ul>
-      <p className="small-text inner ">
-        <div class="box">
-          <ul class="built-with ">
-            <li>
-              I built this site with
-              <a href="https://facebook.github.io/react/">React</a> components
-            </li>
-            <li>
-              and a
-              <a href="https://jsonresume.org/schema/">My JSON Resume Schema</a>
-              .
-            </li>
-            <li>
-              The JSON resume is here
-              <a href="https://registry.jsonresume.org/johnnyboyct">
-                https://registry.jsonresume.org/johnnyboyct
-              </a>
-            </li>
-            <li>
-              The full source code can be found in
-              <a href="https://github.com/johnnyboyct/">my Github repo</a>.
-            </li>
-          </ul>
+      <div className="small-text inner ">
+        <div className="box">
+          <div className="built-with ">
+            I built this site with  <a href="https://facebook.github.io/react/">React</a> components and a <a href="https://jsonresume.org/schema/">My JSON Resume Schema</a>. The JSON resume is here <a href="https://registry.jsonresume.org/johnnyboyct">https://registry.jsonresume.org/johnnyboyct</a> The full source code can be found in <a href="https://github.com/johnnyboyct/">my Github repo</a>.
         </div>
-      </p>
-    </div>
+        </div>
+      </div>
+      </div>
   );
 };
 Profile.propTypes = {
-  profileData: object.isRequired,
+        profileData: object.isRequired,
 };
 export default Profile;

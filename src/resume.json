@@ -5,7 +5,6 @@
         "label": "Senior Software Development Engineer at Adams & Knight",
         "image": "https://www.gravatar.com/avatar/77df42fa9607d27ba7140d0ce3077fc8?s=400",
         "nameImage": "name.png",
-
         "picture": "https://www.gravatar.com/avatar/77df42fa9607d27ba7140d0ce3077fc8?s=400",
         "email": "johnnyboyct@gmail.com",
         "phone": "860-938-9821",
@@ -18,7 +17,8 @@
             "city": "New Britain",
             "region": "CT"
         },
-        "profiles": [{
+        "profiles": [
+            {
                 "network": "LinkedIn",
                 "username": "jmarczak",
                 "url": "https://www.linkedin.com/in/jmarczak/"
@@ -30,7 +30,8 @@
             }
         ]
     },
-    "work": [{
+    "work": [
+        {
             "name": "Adams & Knight",
             "position": "Senior Software Development Engineer",
             "startDate": "2020-08-31",
@@ -130,7 +131,8 @@
         }
     ],
     "volunteer": [],
-    "education": [{
+    "education": [
+        {
             "institution": "New England Technical Institute",
             "area": "Computer and Website Programming",
             "studyType": "Certificate",
@@ -151,7 +153,8 @@
     ],
     "awards": [],
     "publications": [],
-    "skills": [{
+    "skills": [
+        {
             "name": "jQuery",
             "level": "",
             "keywords": []
@@ -407,7 +410,8 @@
         "fluency": "Native Speaker"
     }],
     "interests": [],
-    "references": [{
+    "references": [
+        {
             "name": "Arda Tezjon",
             "reference": "John is a highly skilled Full Stack Senior Developer with strong communication skills and hardworking spirit. He has demonstrated his strong backend and frontend abilities in all the projects we have worked on. He is a quick learner and would be a great fit for your team!"
         },
@@ -448,7 +452,8 @@
             "reference": "John has helped me on multiple projects both professionally and personal. He is by far the most talented, professional and versatile developer I have ever worked with. He consistently demonstrates leadership, flexibility and commitment. John's talent and experience in web development, design, user interaction, corporate branding (and re branding), monetization and ROI, and strategic planning have helped me with all the projects i have consulted him for. His biggest strength is his versatility and going outside the roles most web designers and developers stick to by being highly competent at both both design and development."
         }
     ],
-    "projects": [{
+    "projects": [
+        {
             "name": "Polymer Material Design Word",
             "startDate": "2016-11-30",
             "summary": "https://github.com/johnnyboyct/material-word",
@@ -468,7 +473,8 @@
         "canonical": "https://github.com/jsonresume/resume-schema/blob/v0.1.3/schema.json",
         "theme": "Elegant"
     },
-    "certificates": [{
+    "certificates": [
+        {
             "title": "CIW Certified http://www.ciwcertified.com/",
             "issuer": "CIW",
             "url": "http://www.ciwcertified.com/"

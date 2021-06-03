@@ -1,12 +1,22 @@
+
 html,
 body {
     margin: 0;
     padding: 0;
 }
 
+.margintop{
+    margin-top: 1rem;
+}
+
+.leftcol{
+    margin-top: 0.4rem !important;
+}
+
 body {
     background: #272822;
     font-family: 'Roboto', sans-serif;
+    font-size: calc(1em + 1vw)
 }
 
 p {
@@ -257,6 +267,10 @@ a {
 
 #ParticlesBg {
     height: 100rem !important;
+}
+
+.hg{
+    padding: 0 !important;
 }
 
 #pName {

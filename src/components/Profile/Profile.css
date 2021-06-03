@@ -2,6 +2,12 @@
   background: #000
 }
 
+.full-block{
+  border-radius: 4px;
+    overflow:hidden;
+  display: block;
+}
+
 .contact-links .fa,
 .contact-links .fas,
 .contact-links .fab {
@@ -102,13 +108,13 @@
 }
 
 .built-with {
-  padding: 1rem;
+  padding:  1rem ;
   background: #fff;
   color: #555
 }
 
 .built-with li {
-  font-size: 1rep;
+  font-size: 1rem;
   padding: 1rem;
 }
 
