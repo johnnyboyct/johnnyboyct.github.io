@@ -1,5 +1,5 @@
-import { string } from 'prop-types';
 import React from 'react';
+import { string } from 'prop-types';
 
 const About = props => {
   const { aboutData } = props

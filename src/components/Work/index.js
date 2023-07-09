@@ -1,13 +1,13 @@
-import React from "react";
 import Typography from "@material-ui/core/Typography";
-import LaptopChromebookTwoToneIcon from "@material-ui/icons/LaptopChromebookTwoTone";
-import Timeline from "@material-ui/lab/Timeline";
-import TimelineConnector from "@material-ui/lab/TimelineConnector";
-import TimelineContent from "@material-ui/lab/TimelineContent";
-import TimelineDot from "@material-ui/lab/TimelineDot";
-import TimelineItem from "@material-ui/lab/TimelineItem";
-import TimelineOppositeContent from "@material-ui/lab/TimelineOppositeContent";
-import TimelineSeparator from "@material-ui/lab/TimelineSeparator";
+import TimelineIcon from '@mui/icons-material/Timeline';
+import TimelineConnector from '@mui/lab/TimelineConnector';
+import TimelineContent from '@mui/lab/TimelineContent';
+import TimelineDot from '@mui/lab/TimelineDot';
+import TimelineItem from '@mui/lab/TimelineItem';
+import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import LaptopChromebookTwoToneIcon from '@mui/icons-material/LaptopChromebookTwoTone';
+import React from "react";
 import Moment from "react-moment";
 
 import "./Work.css";
@@ -118,7 +118,7 @@ const Work = (props) => {
   };
   return (
     <section className="work">
-      <Timeline align="alternate">
+      <TimelineIcon align="alternate">
         <h2 className="text-uppercase">
           <i className="fa fa-lg fa-building"></i> Work experience (
           <Moment
@@ -128,7 +128,7 @@ const Work = (props) => {
           )
         </h2>
         {getWorkExperience()}
-      </Timeline>
+      </TimelineIcon>
     </section>
   );
 };

@@ -2,19 +2,17 @@
     "$schema": "https://json.schemastore.org/resume",
     "basics": {
         "name": "John Marczak",
-        "label": "Senior Software Development Engineer at Adams & Knight",
+        "label": "Senior Full Stack Developer",
         "image": "https://www.gravatar.com/avatar/77df42fa9607d27ba7140d0ce3077fc8?s=400",
-        "nameImage": "name.png",
         "picture": "https://www.gravatar.com/avatar/77df42fa9607d27ba7140d0ce3077fc8?s=400",
-        "email": "johnnyboyct@gmail.com",
+        "email": "johnnyboyct@hotmail.com",
         "phone": "860-938-9821",
         "url": "http://johnm.org",
         "summary": "Highly self-motivated, goal-oriented, professional committed to continuing a long-term career in web development and product engineering that offers the opportunity for career advancement along with the further expansion of IT skills. ",
         "location": {
             "countryCode": "US",
-            "address": "29 Russwin Rd.",
-            "postalCode": "06053",
-            "city": "New Britain",
+            "address": "Newington, CT",
+            "city": "Newington",
             "region": "CT"
         },
         "profiles": [
@@ -32,9 +30,29 @@
     },
     "work": [
         {
+            "name": "Ecco Shoes",
+            "position": "Senior Fullstack Developer",
+            "startDate": "2021-07-01",
+            "endDate": "",
+            "highlights": [],
+            "summary":"As a dedicated Full Stack Developer, I played a pivotal role in the success of a multinational organization, initially as a Front End Developer while working remotely from Connecticut, and later transitioning to an on-site role in the vibrant city of Copenhagen, Denmark. Throughout my tenure, I evolved into a versatile professional, contributing as a jack-of-all-trades across various areas.\n\n  Key Contributions:\n\n  Spearheaded the development of an innovative headless international multi-market e-commerce platform from the ground up, collaborating with a global team of talented developers. Involved in every phase, including architecture design, branching strategies, and implementation of Microsoft Azure infrastructure with Terraform for Infrastructure as Code (IaC).\n\n  Orchestrated the setup and customization of essential tools and frameworks such as Node.js, JavaScript, TypeScript, and Deno. Implemented commitizen for quality commit messages, ES and TS lint for linting, Husky for git hooks, and NVM for efficient node version management.\n\n  Leveraged cutting-edge technologies including Docker, Netlify, and GitHub pipelines for CI/CD, testing, and branch-based preview deployments. Implemented comprehensive testing strategies and frameworks, utilizing tools like Jest, Playwright, Postman, Newman, and GitHub Actions.\n\n Ensured high security standards by implementing Static Application Security Testing (SAST) through SonarQube, while actively participating in the overall security aspects of the project.\n\n Employed monitoring and observability tools like Datadog to maintain a stable and performant platform, enabling swift identification and resolution of potential issues.\n\n Collaborated closely with cross-functional teams, incorporating design systems using Figma and Chakra UI, and building monorepos with TurboRepo.\n\n Integrated key headless and SaaS tools such as Algolia for search functionality, commercetools for efficient product data management, Adyen for secure payments, and Contentful for content management.\n\n  Utilized modern front-end frameworks like ReactJS and Next.js, coupled with back-end technologies such as NestJS and a custom GraphQL API for content and translation services.\n\n Actively participated in the transition to an agile methodology, leveraging tools like Jira and Confluence to optimize project management and collaboration.\n\n Promoted to the role of Tech Lead for a B2B platform, taking charge of architectural design and implementation on Azure infrastructure. Led the development of CI/CD pipelines and utilized a range of technologies including Postgres, Socket.IO, Redis, Next.js, Swagger, JWT, Passport, TypeORM, SendGrid, and Azure SSO, alongside an Angular front end.",
+            "summary2": "Started as a front end developer at this wonderful company remote from CT and later relocated the the amazing city of Copenhegan Denmark and switched to more of a full stack, jack of all trades contributor. I was hired during one of the first round of hires as consultants where heavily involved. I was also involved in the hiring process and onboarding of new developers and worked with a global team of talented developers to build a new headless international multi market ecommerce platform from the ground up. I was lucky enough to be involved in everything from architecture, branching strategies, building Microsoft Azure infrastructure with terrafrom for IaC (Infrastructure as Code), Docker development, Netlify hosting, edge functions, and branch based preview deployments, github pipelines for CI/CD and testing, testing strategies and frameworks, SAST (SonarQube) and security, Datadog for monitoring, etc.. At the begining I helped setup and customized tools for nodejs, javascript, typescript, and Deno like commitizen for quality commit messages, linting tools like es and ts lint, Husky for git hooks, NVM for node version management, etc.. We used tools like Figma and helped build design systems with Chakra UI and used ReactJS and Storybook with Chakra-UI and setup monorepos with turborepo. Tools like Jest, Playwright, Postman and Newman, and Github Actions were put in place for testing. Headless and SASS tools like Algolia for search, commercetools for product data, Adyen payment, contentful for content and others where integrated from the start to build custom storefronts able to be deployed to many different markets with different items available, taxes, prices,currencies, and consumers, etc.. Front end was built primarily with React and Nextjs and a backend with NestJS and a custom GraphQL API to manage content and translation services. I was also involved in and contributed to the move to agile and used tools like Jira and Confluence.I was also transitioned to a tech lead on a B2B platform and involved in the architecture and design built on Azure infrastructure and helped build the CI/CD pipelines. using things like Postgres, socket.io, reddis, NextJS, swagger, JWT, passport, typeORM, sendgrid, Azure SSO, with an Angular front end.",
+            "url": "https://us.ecco.com/"
+        },
+        {
+            "name": "Synacor",
+            "position": "Senior Software Engineer",
+            "startDate": "2021-08-31",
+            "endDate": "2022-08-31",
+            "highlights": [],
+            "summary": "Full stack developer with a focus on nodejs and javascript using vanila javascript, Preact, and Vue, also worked with golang and PHP for backend with AWS infrastructure.",
+            "url": "https://synacor.com/"
+        },
+        {
             "name": "Adams & Knight",
-            "position": "Senior Software Development Engineer",
+            "position": "Senior Software Engineer",
             "startDate": "2020-08-31",
+            "endDate": "2021-08-31",
             "highlights": [],
             "summary": "Designed, developed, and consumed RESTful APIs used to rate home and auto insurance from carriers, display ads, get rate and policy information, and schedule call backs to users while collecting analytic and attribution data. Built and debugged both functional and stress tests with Node.js, MySQL, MongoDB and Redis cached back end. Developed ReactJS, Vue, and other MVC framework front ends with vanilla API wrapper to ease the usage for other developers and demo the back ends. Automated tasks using Grunt/Gulp/yeoman/etc. as well as jsdoc to create living documentation. Containerized application micro services to quickly stand up environments for developers and automated CI/CD delivery and deployment with GIT flow following agile methodologies. Created several automation's for releases, change logs, etc. used GitHub actions to continuously develop and deliver AWS web services and orchestration. Participated in security audits and administration. Maintained several companies front end web facing sites and other misc. web related projects. More details available upon request.",
             "url": "https://www.linkedin.com/company/adams-&-knight/"
@@ -405,10 +423,12 @@
             "keywords": []
         }
     ],
-    "languages": [{
-        "language": "en",
-        "fluency": "Native Speaker"
-    }],
+    "languages": [
+        {
+            "language": "en",
+            "fluency": "Native Speaker"
+        }
+    ],
     "interests": [],
     "references": [
         {
@@ -470,13 +490,12 @@
     ],
     "meta": {
         "version": "v0.1.3",
-        "canonical": "https://github.com/jsonresume/resume-schema/blob/v0.1.3/schema.json",
-        "theme": "Elegant"
+        "canonical": "https://github.com/jsonresume/resume-schema/blob/v0.1.3/schema.json"
     },
     "certificates": [
         {
             "title": "CIW Certified http://www.ciwcertified.com/",
-            "issuer": "CIW",
+            "issuer": null,
             "url": "http://www.ciwcertified.com/"
         },
         {
