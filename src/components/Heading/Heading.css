@@ -1,63 +1,184 @@
 :root {
-    --dark-navy: #020c1b;
-    --navy: #0a192f;
-    --light-navy: #112240;
-    --lightest-navy: #233554;
-    --navy-shadow: rgba(2, 12, 27, 0.7);
-    --slate: #8892b0;
-    --light-slate: #a8b2d1;
-    --lightest-slate: #ccd6f6;
-    --white: #e6f1ff;
-    --green-bright: #46cc46;
-    --green-tint: rgba(100, 255, 218, 0.1);
+  --dark-navy: #020c1b;
+  --navy: #0a192f;
+  --light-navy: #112240;
+  --lightest-navy: #233554;
+  --navy-shadow: rgba(2, 12, 27, 0.7);
+  --slate: #8892b0;
+  --light-slate: #a8b2d1;
+  --lightest-slate: #ccd6f6;
+  --white: #e6f1ff;
+  --green-bright: #46cc46;
+  --green-tint: rgba(100, 255, 218, 0.1);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Slab", serif;
+}
+
+.wrap {
+  width: 100%;
+  height: 3em;
+  background-color: black;
+}
+
+.morphing {
+  position: relative;
+  font-size: 3em;
+  background-color: #000;
+  color: #fff;
+  /* min-height: 100vh;*/
+  filter: contrast(25) blur(1px);
+  width: 9em;
+}
+
+.name1 {
+  color: #ff0000;
+}
+
+.name2 {
+  color: #00ff00;
+}
+
+.title1 {
+  color: #0000ff;
+}
+
+.title2 {
+  color: #ff00ff;
+}
+
+.word {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-animation: word 12s infinite ease-in-out;
+  animation: word 12s infinite ease-in-out;
+}
+
+.word:nth-child(1) {
+  -webkit-animation-delay: -12s;
+  animation-delay: -12s;
+}
+
+.word:nth-child(2) {
+  -webkit-animation-delay: -9.6s;
+  animation-delay: -9.6s;
+}
+
+.word:nth-child(3) {
+  -webkit-animation-delay: -7.2s;
+  animation-delay: -7.2s;
+}
+
+.word:nth-child(4) {
+  -webkit-animation-delay: -4.8s;
+  animation-delay: -4.8s;
+}
+
+@-webkit-keyframes word {
+
+  0%,
+  5%,
+  100% {
+    filter: blur(0px);
+    opacity: 1;
   }
 
-  @media screen and (min-width: 600px) {
-    .Typist {
-    color: var(--lightest-slate);
-    text-align: center;
-    font-size: 76px;
-    margin-top: -20px;
-    background-color: black;
-    background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%);
-    margin: 0;
-    overflow: hidden;
-    padding: 2rem;
-    color: white;
-    font: 1.3rem Inconsolata, monospace;
-    text-shadow: 0 0 5px #C8C8C8;
-    height: 11rem;
+  20%,
+  80% {
+    filter: blur(1em);
+    opacity: 0;
+  }
+}
+
+@keyframes word {
+
+  0%,
+  5%,
+  100% {
+    filter: blur(0px);
+    opacity: 1;
   }
 
-  body::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 2px);
-    pointer-events: none;
+  20%,
+  80% {
+    filter: blur(1em);
+    opacity: 0;
   }
+}
 
-  .Typist .Cursor--blinking {
-    color: var(--green-bright);
-    padding-left: 4px;
-  }
-  
-.intro-title {
-    font-family: "Space Mono",monospace,sans-serif;
-    font-size: 5rem;
-  }
+.intro_sec {
+  /* height: calc(100vh - 60px);
+    min-height: 700px;
+    height: 100vh;
+    margin-top: -60px; */
+}
 
-  .intro-name {
-    font-family: "Space Mono",monospace,sans-serif;
-    text-shadow: 2px 2px 2px #000000;
+.intro_sec h2 {
+  margin: 0;
+  padding: 0;
+}
 
-    font-weight: bold;
-    font-size: 86px;
+@media (max-width: 991.98px) {
+  .intro_sec {
+    display: block;
+    height: auto !important;
   }
+}
 
-  .summary{
-    font-size: 1rem;
+.intro_sec .text,
+.intro_sec .h_bg-image {
+  width: 50%;
+}
+
+@media (max-width: 991.98px) {
+
+  .intro_sec .text,
+  .intro_sec .h_bg-image {
+    width: 100%;
   }
+}
+
+.intro_sec .intro {
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+@media (max-width: 991.98px) {
+  .intro_sec .intro {
+    max-width: 700px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.im {
+  color: #777;
+}
+
+.intro h1 {
+  line-height: 0.75em;
+}
+
+.intro {
+  max-width: 30em;
+  margin-top: 0.75em;
+  float: left;
+  width: 15em;
+}
+
+.intro h2 {
+  font-size: 1.5em;
 }

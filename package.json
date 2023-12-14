@@ -4,14 +4,21 @@
   "private": true,
   "homepage": "https://johnnyboyct.github.io",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.9",
-    "@testing-library/react": "^11.2.5",
-    "@testing-library/user-event": "^12.8.0",
-    "prop-types": "^15.7.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@fontsource/roboto": "^5.0.8",
+    "@mui/icons-material": "^5.14.19",
+    "@mui/lab": "^5.0.0-alpha.155",
+    "@mui/material": "^5.14.20",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-lottie": "^1.2.3",
     "react-moment": "^1.1.3",
-    "react-scripts": "4.0.3"
+    "react-parallax-tilt": "^1.7.176",
+    "react-scripts": "5.0.1",
+    "react-share": "^5.0.3",
+    "typewriter-effect": "^2.21.0"
   },
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider  start",
@@ -37,6 +44,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^5.0.0"
+    "gh-pages": "^6.1.0"
   }
 }

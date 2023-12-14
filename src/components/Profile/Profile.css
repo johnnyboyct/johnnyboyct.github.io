@@ -1,32 +1,27 @@
-.contact-links {
-  background: #000
-}
 
-.full-block{
+.full-block {
   border-radius: 4px;
-    overflow:hidden;
+  overflow: hidden;
   display: block;
 }
 
 .contact-links .fa,
 .contact-links .fas,
 .contact-links .fab {
-  margin-right: .75rem;
+  margin-right: 0.75rem;
 }
 
 .contact-links li {
-  margin-bottom: .25rem;
-  margin-top: .25rem;
-  background: black;
-  font-size: .85rem;
+  margin-bottom: 0.25rem;
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
   list-style-type: none;
-  padding-bottom: .5rem;
-  padding-left: .5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
 }
 
 .contact-links a,
 .contact-links span {
-  color: #39ff14;
   text-decoration: none;
   position: relative;
   padding: 2px 2px;
@@ -37,7 +32,6 @@
   content: " ";
   width: 100%;
   height: 1px;
-  background: #39ff14;
   position: absolute;
   right: 0;
   bottom: 0;
@@ -48,7 +42,6 @@
   content: " ";
   width: 4px;
   height: 4px;
-  background: #39ff14;
   position: absolute;
   right: -4px;
   bottom: 0;
@@ -56,7 +49,6 @@
 }
 
 .contact-links a:hover {
-  background: rgba(57, 255, 20, 0.1);
   transition: all 0.1s ease-out;
   padding: 2px 8px;
 }
@@ -87,18 +79,18 @@
 }
 
 .builtWith {
-  padding-left: .5rem;
+  padding-left: 0.5rem;
 }
 
 .text-title-name {
   background: #000;
-  color: #FFFFFF;
+  color: #ffffff;
   display: inline-block;
   font-size: 1.5rem;
   margin-top: 0rem;
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
 
-  padding-top: .5rem;
+  padding-top: 0.5rem;
   text-align: center;
   text-shadow: 1px 1px 1px #000000;
   text-transform: uppercase;
@@ -108,9 +100,9 @@
 }
 
 .built-with {
-  padding:  1rem ;
+  padding: 1rem;
   background: #fff;
-  color: #555
+  color: #555;
 }
 
 .built-with li {
@@ -121,4 +113,7 @@
 .built-with li {
   font-size: 1rep;
   padding: 1rem;
+}
+.inner {
+  padding: 0;;
 }
